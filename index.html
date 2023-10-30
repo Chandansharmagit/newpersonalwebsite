@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <title>Cricket Scholarship Program</title>
+
+
+
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .row_mein {
+            display: flex;
+        }
+
+        .w-100 {
+            width: 100%;
+            height: 75vh;
+            border-radius: 12px;
+        }
+
+        .image_slider_mein {
+            margin-top: 6rem;
+            margin-right: 2rem;
+
+
+
+        }
+
+        .image_sliderr {
+            width: 25vw;
+            height: 75vh;
+            margin-left: 17rem;
+            margin-top: 3rem;
+
+        }
+
+        .example {
+            width: 100%;
+            height: 75vh;
+        }
+
+        /*    header  */
+
+        header {
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 27px 50px;
+            transition: 0.6s;
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0.9)40%, transparent 40%), rgb(117, 113, 113);
+        }
+
+        header.sticky {
+            background: linear-gradient(115deg, rgba(255, 255, 255, 0.9)40%, transparent 40%), rgb(117, 113, 113);
+            padding: 10px 100px;
+        }
+
+        header .brand {
+            color: #000000;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-right: 64px;
+
+        }
+
+        header .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 391px;
+        }
+
+        header .menu a {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            margin: 0 30px;
+            padding: 0 10px;
+            border-radius: 20px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        header .menu a:hover {
+            color: #000;
+            background: #fff;
+        }
+
+        header .btn {
+            color: #fff;
+            font-size: 25px;
+            cursor: pointer;
+            display: none;
+
+        }
+
+        @media(max-width: 700px) {
+            header .btn {
+                display: block;
+                margin-left: 13px;
+            }
+
+            header .menu {
+                position: fixed;
+                background: #1483D5;
+                flex-direction: column;
+                min-width: 390px;
+                height: 100vh;
+                top: 0;
+                right: -100%;
+                padding: 80px 50px;
+                transition: 0.5s;
+                transition-property: right;
+            }
+
+            header .menu.active {
+                right: 0;
+            }
+
+            header .menu .close-btn {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 25px;
+            }
+
+            header .menu a {
+                display: block;
+                font-size: 20px;
+                margin: 20px;
+                padding: 0 15px;
+            }
+
+            .row_mein {
+                flex-direction: column;
+            }
+        }
+
+
+
+
+        /*  csss of navigation  bar created by chandan sharma  */
+
+
+
+
+
+
+
+
+        .mobile-navbar-btn {
+            display: none;
+            background: transparent;
+            cursor: pointer;
+
+        }
+
+
+        .container {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+
+
+        @media(max-width: 700px) {
+            .mobile-navbar-btn {
+                display: block;
+                z-index: 999;
+                color: #212529;
+                size: 23px;
+                margin-right: 17px;
+            }
+
+            .navbar.logo {
+                margin-left: -4px;
+            }
+
+            nav {
+                width: 100%;
+                height: 100vh;
+                background: #797777;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .active nav {
+                transform: translate(0);
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+
+        }
+
+
+
+
+        .image-container {
+            background-image: url(dd.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 650px;
+        }
+
+        .png {
+            padding-left: 352px;
+            width: 1609px;
+            padding-bottom: 124px;
+        }
+
+        .image-id-id {
+            color: rgb(255, 255, 255);
+            margin-left: 44px;
+            margin-top: 90px;
+            font-size: 60px;
+            box-shadow: 5px 5px 10px 5 black;
+        }
+
+        .image-id {
+            margin-right: 450px;
+            margin-top: 110px;
+        }
+
+        .web h2 {
+            color: rgb(253, 253, 253);
+            margin-left: 47px;
+            margin-top: 73px;
+            font-size: 45px;
+
+        }
+
+        .paragraph p {
+            margin-left: 37px;
+            margin-top: 21px;
+            color: rgb(255, 255, 255);
+            font-size: 19px;
+        }
+
+        /*.image-id {
+            width: 60vw;
+            height: 60vh;
+            background-size: 100% 100%;
+            background-image: linear-gradient(117deg, rgba(2, 2, 2, 0.9)62%, transparent 50%),
+                url("blur.jpeg");
+        }*/
+
+        @media(max-width: 700px) {
+            .image-id-id {
+                margin-top: -12px;
+                font-size: 22px;
+                margin-left: -122px;
+
+            }
+
+            .image-id {
+                margin-top: 12px;
+                margin-right: 3px;
+            }
+
+            .web h2 {
+                color: rgb(255, 255, 255);
+                margin-left: -116px;
+                margin-top: 3px;
+                font-size: 30px;
+            }
+
+            .paragraph p {
+                flex-direction: column;
+                margin-left: 37px;
+                margin-top: 21px;
+                color: rgb(255, 255, 255);
+                font-size: 19px;
+                padding-top: 19px;
+                display: none;
+            }
+
+
+            /* .image-container {
+                background-image: url("dd.jpg");
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 201px;
+            } */
+
+            .png {
+                padding-left: -12px;
+                width: 343px;
+                padding-bottom: 6px;
+                margin-top: 4px;
+            }
+
+        }
+
+        .main-col {
+            margin-right: 4rem;
+        }
+
+
+        /*  about me */
+        .new-id {
+            background-color: rgba(51, 0, 26, 0.08);
+        }
+
+        .about-id h2 {
+            text-align: center;
+            padding-top: 35px;
+        }
+
+        .about-id h2::before {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: black;
+            position: absolute;
+            left: 500px;
+            top: 697px;
+
+        }
+
+        .about-id h2::after {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: black;
+            position: absolute;
+            right: 500px;
+            top: 697px;
+
+        }
+
+        .new-id-id .text {
+            text-align: center;
+            font-weight: bold;
+            padding-top: 12px;
+            letter-spacing: 2px;
+        }
+
+        @media(max-width: 700px) {
+            .about-id h2::before {
+                content: '';
+                display: block;
+                width: 95px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                left: 265px;
+                top: 249px;
+
+            }
+
+            .about-id h2::after {
+                content: '';
+                display: block;
+                width: 95px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                right: 265px;
+                top: 249px;
+            }
+        }
+
+        .container-id {
+            background-color: rgba(51, 0, 26, 0.08);
+        }
+
+        .row {
+            display: flex;
+            margin-left: 91px;
+        }
+
+        .img-chandan-id {
+            margin-left: 342px;
+            height: 400px;
+            margin-top: 44px;
+            border-radius: 12px;
+            transition: 0.4s;
+        }
+
+        .img-chandan-id:hover {
+            transform: scale(1.4);
+        }
+
+        .hi-id {
+            padding-top: 44px;
+        }
+
+        .hi-id-id {
+            padding-top: 12px;
+            color: red;
+        }
+
+        .para {
+            padding-top: 12px;
+            font-size: 17;
+            font-weight: bold;
+
+        }
+
+        .hr {
+            margin-top: 12px;
+        }
+
+        .personal-information {
+            padding-top: 13px;
+        }
+
+        .name {
+            padding-top: 12px;
+        }
+
+        .contact-me a {
+            text-decoration: none;
+            color: black;
+        }
+
+        @media(max-width: 700px) {
+            .row {
+                flex-direction: column;
+                margin-left: 28px;
+            }
+
+            .img-chandan-id {
+                margin-left: 21px;
+            }
+
+            /* .para{
+                margin-top: 16rem;
+            } */
+            .image_sliderr {
+                flex-direction: column;
+                margin-top: 45rem;
+            }
+
+        }
+
+        .main-connytate-id-id {
+            background-color: rgba(51, 0, 26, 0.08);
+            height: 310px;
+        }
+
+        .main-connytate-id-id h3 {
+            text-align: center;
+            padding-top: 35px;
+            color: #000000;
+        }
+
+        /*.main-connytate-id-id h3::before {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: rgb(0, 0, 0);
+            position: absolute;
+            left: 475px;
+            top: 1235px;
+        }
+
+        .main-connytate-id-id h3::after {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: black;
+            position: absolute;
+            right: 475px;
+            top: 1235px; 
+        } */
+
+        .main-connytate-id-id h4 {
+            text-align: center;
+            padding-top: 23px;
+        }
+
+        /*      buttons      */
+
+        .row-row {
+            text-align: center;
+            margin-top: 21px;
+
+        }
+
+        .button-id {
+            margin-top: 23px;
+            margin-right: 23px;
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 46px;
+            font-size: 30px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 12px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .button-id-id {
+            margin-top: 23px;
+            margin-right: 23px;
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 45px;
+            font-size: 30px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 12px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .button-id-id-ids {
+            margin-top: 23px;
+            margin-right: 23px;
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 45px;
+            font-size: 30px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 12px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .button-id-id-ids::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            width: 40px;
+            height: 50px;
+            border-top: 5px solid rgb(0, 0, 0);
+            border-left: 5px solid rgb(0, 0, 0);
+            transition: all 0.4s;
+        }
+
+        .button-id-id-ids::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            width: 40px;
+            height: 60px;
+            border-bottom: 5px solid rgb(0, 0, 0);
+            border-right: 5px solid rgb(0, 0, 0);
+            transition: all 0.4s;
+        }
+
+        .button-id::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            width: 40px;
+            height: 50px;
+            border-top: 5px solid rgb(0, 0, 0);
+            border-left: 5px solid rgb(0, 0, 0);
+            transition: all 0.4s;
+        }
+
+        .button-id-id::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            width: 40px;
+            height: 50px;
+            border-top: 5px solid rgb(0, 0, 0);
+            border-left: 5px solid rgb(0, 0, 0);
+            transition: all 0.4s;
+        }
+
+        .button-id-id::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            width: 40px;
+            height: 60px;
+            border-bottom: 5px solid rgb(0, 0, 0);
+            border-right: 5px solid rgb(0, 0, 0);
+            transition: all 0.4s;
+        }
+
+        .button-id:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .button-id:hover::after {
+            width: 100%;
+            height: 100%;
+        }
+
+        .button-id-id-ids:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .button-id-id-ids:hover::after {
+            width: 100%;
+            height: 100%;
+        }
+
+        .button-id-id:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .button-id-id:hover::after {
+            width: 100%;
+            height: 100%;
+        }
+
+        .button-id::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            width: 40px;
+            height: 60px;
+            border-bottom: 5px solid rgb(0, 0, 0);
+            border-right: 5px solid rgb(0, 0, 0);
+            transition: all 0.4s;
+        }
+
+        @media(max-width: 700px) {
+            .main-connytate-id-id {
+                height: 413px;
+            }
+
+            .main-connytate-id-id h3 {
+                text-align: center;
+                padding-top: 21px;
+                color: #000000;
+            }
+
+            /* .main-connytate-id-id h3::before {
+                content: '';
+                display: block;
+                width: 85px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                left: 290px;
+                top: 1288px;
+            }
+
+            .main-connytate-id-id h3::after {
+                content: '';
+                display: block;
+                width: 95px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                right: 290px;
+                top: 1288px;
+            } */
+
+        }
+
+        .text-container{
+            margin-left: 1rem;
+        }
+
+        /* education*/
+
+        .educa {
+            border: none;
+            margin-top: 45px;
+            margin-left: 75px;
+            width: 130px;
+            height: 33px;
+            border-radius: 9px;
+            transition: all 0.4s;
+            font-weight: bold;
+
+        }
+
+        .education-id-id {
+            height: 70vh;
+        }
+
+        .educa:hover {
+            transform: scale(1.1);
+            font-weight: bold;
+        }
+
+        .row-id-id-id {
+            display: flex;
+            padding: 12px;
+        }
+
+        .col-id-id-id {
+            padding: 7px;
+            margin-left: 57px;
+            background-color: rgba(51, 0, 26, 0.08);
+            border-radius: 12px;
+            margin-top: 20px;
+            transition: all 0.4s;
+            height: 300px;
+        }
+
+        .col-id-id-id:hover {
+            transform: scale(1.1);
+        }
+
+        .col-id-id-id .web {
+            width: 11vw;
+            height: 12vh;
+            border-radius: 12px;
+            margin-left: 90px;
+        }
+
+        .col-id-id-id .digital {
+            width: 11vw;
+            height: 13vh;
+            border-radius: 12px;
+            margin-left: 76px;
+        }
+
+        .col-id-id-id h3 {
+            margin-top: 19px;
+        }
+
+        .col-id-id-id .buton {
+            color: blue;
+            background: transparent;
+            border: none;
+            margin-left: 70px;
+
+        }
+
+        .eduacation {
+            background-color: #e3e3e3;
+
+        }
+
+        @media(max-width: 700px) {
+            .row-id-id-id {
+                flex-direction: column;
+            }
+
+            .col-id-id-id {
+                margin-left: 25px;
+                height: 30vh;
+            }
+
+            .col-id-id-id .web {
+                width: 54vw;
+                height: 13vh;
+                margin-left: 53px;
+            }
+        }
+
+
+
+        /*    my some recent work  */
+
+
+        .work-id {
+            background-color: rgba(51, 0, 26, 0.08);
+            height: 230px;
+        }
+
+        .work-id h2 {
+            text-align: center;
+            padding-top: 189px;
+            color: #000000;
+        }
+
+        /*.work-id::before {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: rgb(0, 0, 0);
+            position: absolute;
+            left: 570px;
+            top: 2225px;
+        }
+
+        .work-id::after {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: black;
+            position: absolute;
+            right: 570px;
+            top: 2225px;
+        }*/
+
+        @media(max-width: 700px) {
+
+            /* .work-id::before {
+                content: '';
+                display: block;
+                width: 95px;
+                height: 2px;
+                background: rgb(0, 0, 0);
+                position: absolute;
+                left: 200px;
+                top: 3375px;
+            }
+
+            .work-id::after {
+                content: '';
+                display: block;
+                width: 95px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                right: 200px;
+                top: 3375px;
+            } */
+        }
+
+
+        /*   my some recent work */
+
+        content-container {
+            background-color: #ffe53b;
+            background-image: linear-gradient(147deg, #b1b0aa 0%, #000000 74%);
+            min-height: 80vh;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+        }
+
+        .blog-slider {
+            width: 95%;
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+            padding: 25px;
+            border-radius: 25px;
+            height: 400px;
+            transition: all 0.3s;
+        }
+
+        @media screen and (max-width: 992px) {
+            .blog-slider {
+                max-width: 680px;
+                height: 400px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .blog-slider {
+                min-height: 500px;
+                height: auto;
+                margin: 180px auto;
+            }
+        }
+
+        @media screen and (max-height: 500px) and (min-width: 992px) {
+            .blog-slider {
+                height: 350px;
+            }
+        }
+
+        .blog-slider__item {
+            display: flex;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .blog-slider__item {
+                flex-direction: column;
+            }
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__img img {
+            opacity: 1;
+            transition-delay: 0.3s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>* {
+            opacity: 1;
+            transform: none;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(1) {
+            transition-delay: 0.3s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(2) {
+            transition-delay: 0.4s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(3) {
+            transition-delay: 0.5s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(4) {
+            transition-delay: 0.6s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(5) {
+            transition-delay: 0.7s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(6) {
+            transition-delay: 0.8s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(7) {
+            transition-delay: 0.9s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(8) {
+            transition-delay: 1s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(9) {
+            transition-delay: 1.1s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(10) {
+            transition-delay: 1.2s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(11) {
+            transition-delay: 1.3s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(12) {
+            transition-delay: 1.4s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(13) {
+            transition-delay: 1.5s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(14) {
+            transition-delay: 1.6s;
+        }
+
+        .blog-slider__item.swiper-slide-active .blog-slider__content>*:nth-child(15) {
+            transition-delay: 1.7s;
+        }
+
+        .blog-slider__img {
+            width: 232px;
+            flex-shrink: 0;
+            height: 300px;
+            background-image: linear-gradient(147deg, #c9c5c3 0%, #4a4848 74%);
+            box-shadow: 4px 13px 30px 1px rgba(54 54 54 /20%);
+            border-radius: 20px;
+            transform: translateX(-80px);
+            overflow: hidden;
+        }
+
+        .blog-slider__img:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            opacity: 0.8;
+        }
+
+        .blog-slider__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 0;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        @media screen and (max-width: 768px) {
+            .blog-slider__img {
+                transform: translateY(-50%);
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .blog-slider__img {
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-height: 500px) and (min-width: 992px) {
+            .blog-slider__img {
+                height: 270px;
+            }
+        }
+
+        .blog-slider__content {
+            padding-right: 25px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .blog-slider__content {
+                margin-top: -80px;
+                text-align: center;
+                padding: 0 30px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .blog-slider__content {
+                padding: 0;
+            }
+        }
+
+        .blog-slider__content>* {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 0.4s;
+        }
+
+        .blog-slider__code {
+            color: #7b7992;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .blog-slider__title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0d0925;
+            margin-bottom: 20px;
+        }
+
+        .blog-slider__text {
+            color: #4e4a67;
+            margin-bottom: 30px;
+            line-height: 1.5em;
+        }
+
+        .blog-slider__button {
+            display: inline-flex;
+            background-image: linear-gradient(147deg, #f1e8e1 0%, #1c1c1c 74%);
+            padding: 15px 35px;
+            border-radius: 50px;
+            color: #fff;
+            box-shadow: 0px 14px 80px rgba(54, 52, 52, 0.4);
+            text-decoration: none;
+            font-weight: 500;
+            justify-content: center;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        @media screen and (max-width: 576px) {
+            .blog-slider__button {
+                width: 100%;
+            }
+        }
+
+        .blog-slider .swiper-container-horizontal>.swiper-pagination-bullets,
+        .blog-slid {
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+        }
+
+        .blog-slider__pagination {
+            position: absolute;
+            z-index: 21;
+            right: 20px;
+            width: 11px !important;
+            text-align: center;
+            left: auto !important;
+            top: 50%;
+            bottom: auto !important;
+            transform: translateY(-50%);
+        }
+
+        @media screen and (max-width: 768px) {
+            .blog-slider__pagination {
+                transform: translateX(-50%);
+                left: 50% !important;
+                top: 205px;
+                width: 100% !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 8px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+                margin: 0 5px;
+            }
+        }
+
+        .blog-slider__pagination .swiper-pagination-bullet {
+            width: 11px;
+            height: 11px;
+            display: block;
+            border-radius: 10px;
+            background: #062744;
+            opacity: 0.2;
+            transition: all 0.3s;
+        }
+
+        .blog-slider__pagination .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #606060;
+            height: 30px;
+            box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
+        }
+
+        @media screen and (max-width: 768px) {
+            .blog-slider__pagination .swiper-pagination-bullet-active {
+                height: 11px;
+                width: 30px;
+            }
+        }
+
+
+
+        /*  WEBSITE TIPS INSIGHT AND BEST PRACTISES INSIDE HERE*/
+
+
+        .tips-insight {
+            background-color: rgba(51, 0, 26, 0.08);
+            height: 237px;
+        }
+
+        .tips-insight h2 {
+            text-align: center;
+            padding-top: 189px;
+            color: #000000;
+        }
+
+        /*.tips-insight::before {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: rgb(0, 0, 0);
+            position: absolute;
+            left: 550px;
+            top: 2960px;
+        }
+
+        .tips-insight::after {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: black;
+            position: absolute;
+            right: 550px;
+            top: 2960px;
+        } */
+
+        @media(max-width: 700px) {
+
+            .tips-insight {
+                background-color: rgba(51, 0, 26, 0.08);
+                height: 290px;
+            }
+
+            /*.tips-insight::before {
+                content: '';
+                display: block;
+                width: 95px;
+                height: 2px;
+                background: rgb(0, 0, 0);
+                position: absolute;
+                left: 200px;
+                top: 4510px;
+            }
+
+            .tips-insight::after {
+                content: '';
+                display: block;
+                width: 95px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                right: 200px;
+                top: 4510px;
+            }*/
+        }
+
+
+        /*        image gallary  */
+        .my-work {
+            padding-top: 51px;
+            background-color: #9e9292;
+            height: 615px;
+        }
+
+        .row-image {
+            display: flex;
+            height: 450px;
+        }
+
+        .col-image {
+            background: whitesmoke;
+            height: 520px;
+            margin-left: 7rem;
+            width: 350px;
+            border-radius: 12px;
+            transition: all 0.4s;
+
+        }
+
+        .ui-id {
+            margin-top: 9px;
+            font-weight: bold;
+            opacity: 0.5;
+            text-align: center;
+        }
+
+        .col-image:hover {
+            transform: scale(1.1);
+        }
+
+        .col-image .computer {
+            width: 100%;
+            height: 25vh;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .pa-id-id {
+            font-size: 17px;
+            font-weight: bold;
+            opacity: 0.8;
+            margin-left: 12px;
+            padding-top: 9px;
+        }
+
+        .buton-id-id {
+            border: none;
+            background-color: dimgray;
+            margin-left: 18px;
+            padding-top: 1px;
+            margin-top: 12px;
+            height: 38px;
+            width: 120px;
+            color: #fff;
+            border-radius: 12px;
+            transition: all 0.4s;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .buton-id-id:hover {
+            transform: scale(1.1);
+            color: rgb(221, 211, 211);
+        }
+
+        @media(max-width: 700px) {
+            .my-work {
+                height: 1475px;
+            }
+
+            .row-image {
+                flex-direction: column;
+            }
+
+            .col-image {
+                margin-left: 23px;
+                margin-top: 39px;
+                width: 317px;
+                height: 422px;
+            }
+        }
+
+
+        /*    contact me   */
+
+
+
+
+
+        .pregination-content {
+            background-color: rgba(51, 0, 26, 0.08);
+            height: 237px;
+        }
+
+        .pregination-content h3 {
+            text-align: center;
+            padding-top: 22px;
+            text-transform: uppercase;
+        }
+
+        .pregination-contact-me-h2 h2 {
+            text-align: center;
+            padding-top: 70px;
+        }
+
+        /* .pregination-content::before {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: rgb(0, 0, 0);
+            position: absolute;
+            left: 500px;
+            top: 3695px;
+        }
+
+        .pregination-content::after {
+            content: '';
+            display: block;
+            width: 95px;
+            height: 2px;
+            background: black;
+            position: absolute;
+            right: 500px;
+            top: 3700px;
+        }*/
+
+        @media(max-width: 700px) {
+            .pregination-content {
+                background-color: rgba(51, 0, 26, 0.08);
+                height: 290px;
+            }
+
+            /* .pregination-content::before {
+                content: '';
+                display: block;
+                width: 95px;
+                height: 2px;
+                background: rgb(0, 0, 0);
+                position: absolute;
+                left: 265px;
+                top: 6273px;
+            }
+
+            .pregination-content::after {
+                content: '';
+                display: block;
+                width: 95px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                right: 265px;
+                top: 6273px;
+            } */
+        }
+
+        /*      end of contact me form  */
+
+
+        /*    open of contact form in row and column wise created by chandan sharma  */
+        .contact-form {
+            background-color: whitesmoke;
+            margin-left: 22px;
+            margin-right: 22px;
+            margin-top: 22px;
+            margin-bottom: 22px;
+        }
+
+        .col-pregination-created-by-chandan-sharma li {
+            list-style: none;
+        }
+
+        .col-pregination-created-by-chandan-sharma .fa {
+            width: 12px;
+            margin-top: 12px;
+        }
+
+        .col-pregination-created-by-chandan-sharma a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            margin-top: 2px;
+            font-size: 19px;
+            margin-left: 12px;
+
+        }
+
+        .mb-6 {
+            padding: 16px;
+            transition: 0.5s;
+        }
+
+        .mb-6:hover {
+            color: orange;
+            box-shadow: 0 0 5px 5px orange;
+        }
+
+        .id-2 {
+            border-radius: 12px;
+            height: 30px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background: transparent;
+            width: 100%;
+        }
+
+        .text-center .paragraph {
+            font-weight: bold;
+            font-size: 34px;
+            padding-bottom: 13px;
+        }
+
+        .text-center .h1-id-1 {
+            font-weight: bold;
+            font-size: 34px;
+            padding-bottom: 35px;
+        }
+
+        .content-id-id-2 {
+            font-weight: bold;
+            color: #050505;
+        }
+
+        .id-3 {
+            background: transparent;
+            height: 39px;
+            width: 165px;
+            border-radius: 12px;
+            transition: 0.4s;
+        }
+
+        .id-3:hover {
+            transform: scale(1.1);
+            color: orange;
+            box-shadow: 0 0 5px 5px orange;
+        }
+
+        .row-pregination-created-by-chandan-sharma {
+            display: flex;
+        }
+
+        .col-pregination-created-by-chandan-sharma .hello {
+            margin-left: 66px;
+            margin-top: 53px;
+        }
+
+        .col-pregination-created-by-chandan-sharma .hello .hii {
+            padding-top: 30px;
+        }
+
+        .col-pregination-created-by-chandan-sharma .login-form {
+            padding-top: 12px;
+        }
+
+        .col-pregination-created-by-chandan-sharma .login-form h3 {
+            padding-top: 71px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .row-pregination-created-by-chandan-sharma hr {
+            display: none;
+        }
+
+        @media(max-width: 700px) {
+            .row-pregination-created-by-chandan-sharma {
+                flex-direction: column;
+            }
+
+            .hii {
+                margin-left: -51px;
+            }
+
+            .row-pregination-created-by-chandan-sharma hr {
+                display: block;
+            }
+
+            .row-pregination-created-by-chandan-sharma .login-form {
+                margin-top: -46px;
+            }
+        }
+
+        /*  end the css of contact form  */
+
+        .img1 {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .section4 {
+            padding: 70px;
+            background-color: whitesmoke;
+            transition: 0.4s;
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            box-sizing: border-box;
+        }
+
+        .content1 .img1 {
+            height: 230px;
+            width: auto;
+        }
+
+        .content1 {
+            margin: 20px;
+            position: relative;
+            transition: transform 1s ease;
+            display: block;
+            border-radius: 8px;
+            height: 242px;
+            width: auto;
+        }
+
+        .content1:hover {
+            transform: translateY(-14px);
+        }
+
+        .content1:hover h2 {
+            color: red;
+            transition: all 1s ease;
+        }
+
+        .content1::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(rgba(255, 255, 255, 0.1));
+            display: block;
+            border-radius: 8px;
+        }
+
+        .content1 .info {
+            position: absolute;
+            left: -37px;
+            right: 0;
+            bottom: -15px;
+            display: flex;
+            padding: 0 30px;
+        }
+
+        .info button:hover {
+            background: #ff4a52;
+        }
+
+        /* media quarries */
+        @media screen and(max-width: 700px) {
+            .section4 {
+                padding: 30px;
+            }
+
+
+            .container2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .content1 {
+                margin-left: 12px;
+                margin: 20px;
+                position: relative;
+                transition: transform 1s ease;
+                display: block;
+                border-radius: 8px;
+                height: 242px;
+                width: auto;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .section4 {
+                padding: 15px;
+            }
+
+            .container2 {
+                grid-template-columns: 1fr;
+            }
+
+            .content1 {
+                margin-left: 12px;
+                margin: 20px;
+                position: relative;
+                transition: transform 1s ease;
+                display: block;
+                border-radius: 8px;
+                height: 492px;
+                width: auto;
+            }
+
+            .content1 .img1 {
+                width: 78vw;
+                height: 53vh;
+            }
+        }
+
+        /*    footer   */
+
+        /*   massage from the me   */
+        .massage-box {
+            background: rgba(149, 148, 148, 0.17);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .image-container-id-id {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-left: 12px;
+        }
+
+        /* .image-container-id img {
+            flex: 1;
+            max-width: 427px;
+            margin-right: 0px;
+        } */
+
+        .text-container {
+            flex: 2;
+            margin-left: 96px;
+        }
+
+        .text-container h1 {
+            padding-bottom: 33px;
+        }
+
+        .text-container h3 {
+            padding-bottom: 12px;
+        }
+
+        .text-container p {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        @media (max-width:700px) {
+            .massage-box {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .text-container h1 {
+                text-align: center;
+            }
+
+            .text-container h3 {
+                text-align: center;
+            }
+        }
+
+
+
+
+        /* 
+        footer */
+
+
+
+
+
+
+
+
+        footer-1 {
+            background-color: rgb(0, 0, 0);
+            color: #ffffff;
+            padding: 40px 0;
+            margin-top: 104px;
+        }
+
+        .containerr {
+            background-color: black;
+            color: white;
+        }
+
+        footer-1 h3 {
+            font-size: 18px;
+            color: #fffdfd;
+            margin-bottom: 20px;
+            margin-left: 126px;
+        }
+
+        footer-1 p {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer-1 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-left: 128px;
+        }
+
+        .tel {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .tel:hover {
+            color: orange;
+        }
+
+        footer-1 ul li {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+            transition: 0.5s;
+        }
+
+        footer-1 ul li:hover {
+            transform: scale(1.1);
+        }
+
+        footer-1 ul li i {
+            margin-right: 10px;
+        }
+
+        .social-links li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .helo-chandan {
+            margin-left: 1rem;
+        }
+
+        .social-links li a {
+            color: #fffefe;
+            font-size: 24px;
+            display: block;
+            line-height: 40px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            border-radius: 50%;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .social-links li a:hover {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        footer-1 .row-row {
+            display: flex;
+            margin-left: 34px;
+        }
+
+        footer-1 .media-icons {
+            color: orange;
+        }
+
+        footer-1 .containerr .copy {
+            text-align: center;
+            margin-bottom: -30px;
+        }
+
+        footer-1 .containerr hr {
+            margin-left: 81px;
+            margin-right: 81px;
+        }
+
+        @media (max-width: 700px) {
+            .row-row {
+                flex-direction: column;
+            }
+
+            .h3-tag {
+                margin-left: -119px;
+            }
+
+            .copy {
+                margin-top: 5px;
+                margin-left: 3px;
+            }
+
+            .deeika {
+                margin-left: -126px;
+            }
+
+            footer-1 .containerr hr {
+                margin-left: 31px;
+                margin-right: 17px;
+            }
+
+            .helo-chandan {
+                margin-left: -122px;
+            }
+        }
+    </style>
+    <header>
+        <a href="#" class="brand">C.Sharma</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="#home">home</a>
+            <a href="#about-me">about us</a>
+            <a href="#services">services</a>
+            <a href="#contact-me">contact me</a>
+            <a href="#portfolio">portfolio</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+
+    <div class="row_mein">
+        <div class="col_mein">
+            <div id="home">
+                <div class="image-container">
+                    <!----<img src="png.png" class="png">---->
+                    <div class="image-id">
+                        <div class="img">
+                            <h1 class="image-id-id">Hello I'm Chandan</h1>
+                        </div>
+                        <div class="web">
+                            <h2>Web Designer</h2>
+                        </div>
+                        <div class="paragraph">
+                            <p>
+                                I design and develop services for customer specializing<br>
+                                stylish modern websites,web services and online stores.<br>My
+                                passion is to design digital user experiences
+                                through meaningful interactions.<br> Check out my portfolio.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col_mein">
+            <div class="example">
+                <div class="image_slider_mein">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="Picsart_23-09-30_23-40-26-599.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="Picsart_23-09-28_20-29-44-518-01 (2).jpg"
+                                    alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="Picsart_23-09-30_20-22-32-871.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div id="about-me">
+        <div class="new-id">
+            <div class="about-id">
+                <h2>ABOUT ME</h2>
+            </div>
+            <div class="new-id-id">
+                <p class="text">I DESIGN AND CODE BEAUTIFUL THINGS AND I LOVE WHAT I DO,</p>
+            </div>
+
+        </div>
+        <div class="container-id">
+            <div class="row">
+                <div class="col">
+                    <div class="col-id">
+                        <h1 class="hi-id">I'm Chandan </h1>
+                        <h2 class="hi-id-id">A lead Visual Artist based in Nepal.</h2>
+                        <p class="para">I design and develop services for customer specializing stylish modern
+                            websites,web services and online stores.My passion
+                            is to design digital user experiences through meaningful interactions.
+                            Check out my portfolio.
+
+                        </p>
+                        <hr class="hr">
+                        <h2 class="personal-information">PERSONAL INFORMATION</h2>
+                        <h3 class="name">Name: Chandan Sharma</h3>
+                        <br>
+                        <h3 class="Age">Age: 18</h3>
+                        <br>
+                        <h3 class="Nationality">Nationality: Nepal, India</h3>
+                        <br>
+                        <h3 class="language">language: French English, Nepali, Hindi</h3>
+                        <br>
+                        <h3 class="contact-me">Phone: <a href="tel:+9779845427041">+9779845427041</a></h3>
+                    </div>
+                </div>
+                <div class="col">
+
+
+                    <div class="image_sliderr">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="Picsart_23-09-30_23-40-26-599.jpg"
+                                        alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="Picsart_23-09-28_20-29-44-518-01 (2).jpg"
+                                        alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="Picsart_23-09-30_20-22-32-871.jpg"
+                                        alt="Third slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <img src="Picsart_23-09-30_23-28-33-684.jpg" class="img-chandan-id"> -->
+
+                </div>
+            </div>
+        </div>
+        <div class="main-connytate-id-id">
+            <h3>CHANDAN SHARMA</h3>
+            <h4>IT IS A LONG ESTABLISHED THAT A READER WILL BE DISTRACRTED BY THE READABLE<br>CONTENT OF A PAGE WHEN
+                LOOKING
+                AT ITS LAYOUT</h4>
+            <div class="row-row">
+                <button class="button-id">EDUCATION</button>
+                <button class="button-id-id">SKILLS</button>
+                <button class="button-id-id-ids">EXPERIENCES</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!------massage from meeeee    -->
+
+    <div class="massage-box">
+        <div class="image-container-id-id">
+            <!-- <img src="Picsart_23-09-30_23-40-26-599.jpg" alt="chandan"> -->
+            <!-- <div class="image_slider_mein"> -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 h-75vh" src="Picsart_23-09-30_23-40-26-599.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 h-75vh" src="Picsart_23-09-28_20-29-44-518-01 (2).jpg"
+                            alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 h-75vh" src="Picsart_23-09-30_20-22-32-871.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev h-75vh" href="#carouselExampleIndicators" role="button"
+                    data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- </div> -->
+        </div>
+        <div class="text-container">
+            <h1>Chandan sharma</h1>
+            <p><b><i>Hey, I am chandan sharma. I am from Nepal. And currently
+                        studying on grade 11 on local government school. Though, I don’t have adequate time to spend
+                        for learning computer programming since I am pressurized by my own school course content, but I
+                        separate an hour of a day to learn something new in computer
+                        programming and in graphic designing , website designing as well as cyber field being I have
+                        great
+                        passion on cyber tech field.
+
+                        Chandan Sharma - Full Stack Developer
+
+                        Chandan Sharma is a full stack developer with a passion for creating elegant solutions in the
+                        least amount of time. He has a strong focus on backend development, but is also proficient in
+                        frontend development and has experience with a wide range of technologies, including PHP,
+                        Laravel, MySQL, Redis, Docker, JavaScript, Vue.js, HTML, CSS, and AWS services.
+
+                        Chandan has over 1 years of experience in the tech industry, and has worked on a variety of
+                        projects, including developing an ecommerce webapp, customer web portal, documentary launch
+                        website, and donations webapp for a local charity. He is also an active member of the tech
+                        community and regularly attends web developer meetups.He has a strong focus on backend
+                        development, but is also proficient in
+                        frontend development and has experience with a wide range of technologies, including PHP,
+                        Laravel, MySQL, Redis, Docker, JavaScript, Vue.js, HTML, CSS, and AWS services.</i></b></p>
+            <h3>-web designer</h3>
+        </div>
+    </div>
+
+
+
+
+    <div class="eduacation">
+        <div class="education-id-id">
+            <button class="educa">EDUCATION</button>
+            <div class="row-id-id-id">
+                <div class="col-id-id-id">
+                    <img src="images.jpg" class="web">
+                    <h3>Computer Engineering - D.P.C Computer science <br>& polytecnic institute </h3>
+                    <a href="#"><button type="button" class="buton">Learn more!</button></a>
+
+                </div>
+                <div class="col-id-id-id">
+                    <img src="computerscience.jpg" class="web">
+                    <h3>Computer science - D.P.C Computer science <br>& polytecnic institute </h3>
+                    <a href="#"><button type="button" class="buton">Learn more!</button></a>
+                </div>
+                <div class="col-id-id-id">
+                    <img src="web.png" class="web">
+                    <h3>Web developing - D.P.C Computer science <br>& polytecnic institute </h3>
+                    <a href="index.html"><button type="button" class="buton">Learn more!</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!----- my some recent work-->
+
+    <div id="services">
+
+        <div class="work-id">
+            <h2>MY SOME RECENT WORK</h2>
+        </div>
+
+        <!---   my some recent work  -->
+
+
+
+        <content-container>
+            <div class="blog-slider">
+                <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="gra.png">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">2019/01/12</span>
+                            <div class="blog-slider__title">Designing</div>
+                            <div class="blog-slider__text">designing the graphics it makes me more excitement
+                                about my work what i design.
+                            </div>
+                            <a href="#" class="blog-slider__button">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="Picsart_23-09-28_20-29-44-518-01.jpg">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">2022/2/2</span>
+                            <div class="blog-slider__title">Website tamplate</div>
+                            <div class="blog-slider__text"> i love most Designing the website tamplates .it is the
+                                another
+                                next level of
+                                challanging things for developers. </div>
+                            <a href="#" class="blog-slider__button">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img src="websitedesign.png">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">2023/1/2</span>
+                            <div class="blog-slider__title">Frontend desinging</div>
+                            <div class="blog-slider__text">i have learned full frontend developent works.At present im
+                                learning backend development
+                                so i design frontend more attractive and beautifully.i have attaced some of my project
+                                in my
+                                image gallary.
+                            </div>
+                            <a href="#" class="blog-slider__button">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <img
+                                src="op-Ten-Front-End-Design-Rules-For-Developers_Luke-Social-33a3a7c9b759fdaa22973906070f8065.png">
+                        </div>
+                        <div class="blog-slider__content">
+                            <span class="blog-slider__code">Recently a day ago</span>
+                            <div class="blog-slider__title">frontend developing</div>
+                            <div class="blog-slider__text">i have learned full frontend developent works.At present im
+                                learning backend development
+                                so i design frontend more attractive and beautifully.i have attaced some of my project
+                                in my
+                                image gallary.
+                            </div>
+                            <a href="#" class="blog-slider__button">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-slider__pagination"></div>
+            </div>
+        </content-container>
+    </div>
+
+
+    <!-----     TIPS  INSIGHT     -->
+
+    <div class="tips-insight">
+        <h2>TIPS,INSIGHT AND BEST PRACTISES ABOUT WEB DESIGN AND DEVELOPMENT</h2>
+    </div>
+
+    <!--------  TIPS INSIGHT END HERE     -->
+
+
+    <!---     TIPS INSIGHT ROW AND COLUMN HERE    -->
+
+    <div class="my-work">
+        <div class="image-gallary">
+            <div class="row-image">
+                <div class="col-image">
+                    <img src="op-Ten-Front-End-Design-Rules-For-Developers_Luke-Social-33a3a7c9b759fdaa22973906070f8065.png"
+                        class="computer">
+                    <h3 class="ui-id">Why Should We Hire UI/UX Guy Before Work</h3>
+                    <p class="pa-id-id"> they help identify your users, understand their needs and problems and hence
+                        allow
+                        you to define better solutions to address their problems.</p>
+                    <a href="#"><button type="button" class="buton-id-id">Read More!</button></a>
+
+
+                </div>
+                <div class="col-image">
+                    <img src="png-transparent-graphic-designer-logo-innovative-ideas-web-design-hand-orange-thumbnail.png"
+                        class="computer">
+                    <h3 class="ui-id">A good websites start with a good idea.</h3>
+                    <p class="pa-id-id">well we all know that the ideas is the only things that matter
+                        it doesnt matter what your background is or what your certificate is one revolutionary idea
+                        can make a product and make available anywhere in the world.
+                    </p>
+                    <a href="#"><button type="button" class="buton-id-id">Read More!</button></a>
+                </div>
+                <div class="col-image">
+                    <img src="websitedesign.png" class="computer">
+                    <h3 class="ui-id">website development</h3>
+                    <p class="pa-id-id">Humanity has become more dependent on technology.
+                        Businesses require websites to display their expertise, products, or
+                        talents. It is possible to design and maintain with the help of a website.</p>
+                    <a href="#"><button type="button" class="buton-id-id">Read More!</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-me-id">
+        <div class="pregination-content">
+            <div class="pregination-contact-me-h2">
+                <h2 class>Contact me!</h2>
+            </div>
+            <h3>feel free to get me in touch with me
+                i am always open to discussing new projects <br>
+                creating ideas or oppurtunities
+                to be the part of value visions
+            </h3>
+        </div>
+    </div>
+
+
+    <!-----  END OF THE TIPS INSIGHT HERE     -->
+
+
+    <!-------------      contact form in row and column wise      -->
+    <div id="contact-me">
+        <div class="contact-form">
+            <div class="row-pregination-created-by-chandan-sharma">
+                <div class="col-pregination-created-by-chandan-sharma">
+                    <div class="hello">
+                        <div class="hii">
+                            <li><i class="fa fa-phone"></i> <a href="#">PHONE :</a></li>
+                            <h5><a href="tel:+9779845427041">+977-9845427041</a> </h5>
+                            <h5><a href="tel:+9779845427041">+977-9845427041</a> </h5>
+                        </div>
+                        <div class="hii">
+                            <li><i class="fa fa-envelope"></i><a href="#">EMAIL :</a></li>
+                            <a href="mailto:utamsharma57@gmail.com">utamsharma57@gmail.com</a>
+                            <br>
+                            <a href="mailto:chandansharma89741@gmail.com">chandansharma89741@gmail.com</a>
+                        </div>
+                        <div class="hii">
+                            <li><i class="fa fa-map-marker"></i> <a href="#">ADDRESS :</a></li>
+                            <h3>Nawalparasi-east, Madhybindu 7, chormara</h3>
+                            <h3>Nawalparasi-east, daldale </h3>
+                            <h3>Rautahat, chandranigahapur</h3>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <hr>
+                <div class="col-pregination-created-by-chandan-sharma">
+                    <div class="login-form">
+                        <h3>if you have any suggestions, projects or even you want to say hello
+                            please fill out the form below and i will reply you shortly
+                        </h3>
+                        <div class="m-7">
+                            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                                <input type="hidden" name="access_key" value="d48b4a57-5432-4f11-998d-5711025fce64" />
+                                <input type="hidden" name="subject" value="Email from your website viewer" />
+                                <input type="checkbox" name="botcheck" id="" style="display: none;" />
+                                <div class="mb-6">
+                                    <label for="name" class="content-id-id-2">Full
+                                        Name :</label>
+                                    <input type="text" name="name" id="name"
+                                        placeholder="enter your name here/by chandan sharma" required class="id-2" />
+                                </div>
+                                <div class="mb-6">
+                                    <label for="email" class="content-id-id-2">Email
+                                        Address :</label>
+                                    <input type="email" name="email" id="email"
+                                        placeholder="enter your gmail here/by chandan sharma" required class="id-2" />
+                                </div>
+                                <div class="mb-6">
+                                    <label for="phone" class="content-id-id-2">Phone Number : </label>
+                                    <input type="text" name="phone" id="phone"
+                                        placeholder="enter your phone number/by chandan sharma" required class="id-2" />
+                                </div>
+                                <div class="mb-6">
+                                    <label for="message" class="content-id-id-2">Your
+                                        Message :</label>
+                                    <textarea rows="5" name="message" id="message" placeholder="Your Message"
+                                        class="id-2" required></textarea>
+                                </div>
+                                <div class="mb-6">
+                                    <button type="submit" class="id-3">
+                                        Send Us Message
+                                    </button>
+                                </div>
+                                <p class="id-id-3" id="result"></p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-----image gallary of creater  -->
+    <div class="section4" id="portfolio">
+        <h1 class="imagegallary">Image Gallary</h1>
+        <hr>
+        <div class="container2">
+            <div class="content1">
+                <img class="img1" img
+                    src="op-Ten-Front-End-Design-Rules-For-Developers_Luke-Social-33a3a7c9b759fdaa22973906070f8065.png"
+                    alt="images">
+                <div class="info">
+                    <h2>graphic designing</h1>
+                </div>
+            </div>
+            <div class="content1">
+                <img class="img1" src="images.jpg" alt="images">
+                <div class="info">
+                    <h2>frontend development</h2>
+                </div>
+            </div>
+            <div class="content1">
+                <img class="img1" img src="websitedesign.png" alt="images">
+                <div class="info">
+                    <h2>graphics Designing</h2>
+                </div>
+            </div>
+            <div class="content1">
+                <img class="img1" img src="websitedesign.png" alt="images">
+                <div class="info">
+                    <h2>chandan sharma<br>developer</h2>
+                </div>
+            </div>
+            <div class="content1">
+                <img class="img1" img
+                    src="op-Ten-Front-End-Design-Rules-For-Developers_Luke-Social-33a3a7c9b759fdaa22973906070f8065.png"
+                    alt="images">
+                <div class="info">
+                    <h2>chandan sharma<br>developer</h2>
+                </div>
+            </div>
+            <div class="content1">
+                <img class="img1" img src="images.jpg" alt="images">
+                <div class="info">
+                    <h2>frontend design</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------     footer     -->
+
+
+    <footer-1>
+        <div class="containerr" data-aos="fade-up">
+            <div class="row-row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="h3-tag">
+                        <h3>About us</h3>
+                    </div>
+                    <p> I design and develop services for<br> customer specializing
+                        stylish modern websites,web services and<br> online stores.
+                        My passion is to design digital user experiences <br>through meaningful interactions.
+                        Check out my portfolio..
+
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="helo-chandan">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><i class="fa fa-map-marker"></i> <a href="#map" class="tel">Pragatinagar , Daldale</a>
+                            </li>
+                            <li><i class="fa fa-phone"></i><a href="tel:+9779845427041" class="tel">+9779845427041</a>
+                            </li>
+                            <li><i class="fa fa-envelope"></i>
+                                <a href="mailto:chandansharma575757@gmail.com"
+                                    class="tel">chandansharma575757@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="helo-chandan">
+                        <h3>Follow Us</h3>
+                        <ul class="social-links">
+                            <li><a href="https://www.facebook.com/profile.php?id=100075733637481"><i
+                                        class="fa fa-facebook-f"></i>
+                            </li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="deepika-id">
+            <h3 class="copy">Chandan sharma - @2023</h3>
+        </div>
+    </footer-1>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        // for responsive navbar created by chandan sharma
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+        menuBtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+        closeBtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <!---<script type="text/javascript" src="script.js"></script>--->
+    <script>
+        var swiper = new Swiper('.blog-slider', {
+            spaceBetween: 30,
+            effect: 'fade',
+            loop: true,
+            mousewheel: {
+                invert: false,
+            },
+            // autoHeight: true,
+            pagination: {
+                el: '.blog-slider__pagination',
+                clickable: true,
+            }
+        });
+    </script>
+    <script>
+        const form = document.getElementById("form");
+        const result = document.getElementById("result");
+        form.addEventListener("submit", function (e) {
+            const formData = new FormData(form);
+            e.preventDefault();
+            var object = {};
+            formData.forEach((value, key) => {
+                object[key] = value;
+            });
+            var json = JSON.stringify(object);
+            result.innerHTML = "Please wait...";
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = json.message;
+                        result.classList.remove("text-gray-500");
+                        result.classList.add("text-green-500");
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                        result.classList.remove("text-gray-500");
+                        result.classList.add("text-red-500");
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 5000);
+                });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
